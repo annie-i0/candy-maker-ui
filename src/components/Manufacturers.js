@@ -32,7 +32,6 @@ const Manufacturers = () => {
     const filtered = filterManufacturers(manufacturerList, searchTerm);
 
     // Now that we have the filtered array, set that array to our state named filteredManufacturerList
-    console.log(manufacturerList)
     setFilteredManufacturerList(filtered);
   }, [searchTerm]); // Due to the [searchTerm] as the second param this useEffect runs every time searchTerm changes
 
