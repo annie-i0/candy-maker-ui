@@ -14,3 +14,11 @@ export const retrieveManufacturers = async () => {
   // Return the complete list of manufacturers
   return manufacturers;
 };
+
+export const retrieveProducts = async (list, id) => {
+  const singleManufacturer = list.filter((manufacturer) =>
+    manufacturer.id.toString() === id.toString()
+  )
+  const products = singleManufacturer[0].products
+  return products
+}

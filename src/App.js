@@ -1,6 +1,8 @@
 import './App.css';
 import Manufacturers from './components/Manufacturers'
+import ManufacturerDetail from './components/ManufacturerDetail'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import ErrorPage from './components/ErrorPage';
 
 function App() {
   return (
@@ -10,9 +12,11 @@ function App() {
         <Route exact path='/'>
           <Manufacturers/>
         </Route>
-        <Route path='/products'>
-          
-
+        <Route path='/products/:id'>
+        <ManufacturerDetail/>
+        </Route>
+        <Route path="*">
+          <ErrorPage/>
         </Route>
       </Switch>
       </BrowserRouter>
